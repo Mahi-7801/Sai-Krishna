@@ -1,0 +1,79 @@
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-brand-dark border-t border-brand-charcoal pt-20 pb-10">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        {/* Brand & Address */}
+        <div className="md:col-span-1">
+          <h2 className="text-2xl font-serif text-brand-ivory font-light mb-6">
+            Sai Krishna <span className="italic block text-lg">Photography</span>
+          </h2>
+          <p className="text-brand-ivory/60 text-sm font-sans leading-relaxed mb-6">
+            30 years of capturing life's most precious moments with documentary realism and timeless elegance.
+          </p>
+          <div className="text-brand-ivory/40 text-xs font-sans uppercase tracking-widest space-y-2">
+            <p>123 Studio Avenue</p>
+            <p>Hyderabad, Telangana 500033</p>
+          </div>
+        </div>
+
+        {/* Links Column 1 */}
+        <div className="md:col-span-1 md:ml-auto">
+          <h3 className="text-brand-gold text-xs font-sans tracking-widest uppercase mb-6">Studio</h3>
+          <ul className="space-y-4 text-brand-ivory/70 text-sm font-sans">
+            <li><a href="/about" className="hover:text-brand-gold transition-colors">About Us</a></li>
+            <li><a href="/portfolio" className="hover:text-brand-gold transition-colors">Portfolio</a></li>
+            <li><a href="/reviews" className="hover:text-brand-gold transition-colors">Testimonials</a></li>
+            <li><a href="/contact" className="hover:text-brand-gold transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        {/* Links Column 2 */}
+        <div className="md:col-span-1">
+          <h3 className="text-brand-gold text-xs font-sans tracking-widest uppercase mb-6">Services</h3>
+          <ul className="space-y-4 text-brand-ivory/70 text-sm font-sans">
+            <li><a href="/services/wedding" className="hover:text-brand-gold transition-colors">Weddings</a></li>
+            <li><a href="/services/pre-wedding" className="hover:text-brand-gold transition-colors">Pre-Wedding</a></li>
+            <li><a href="/services/maternity" className="hover:text-brand-gold transition-colors">Maternity</a></li>
+            <li><a href="/packages" className="hover:text-brand-gold transition-colors">Packages</a></li>
+            <li><a href="/services" className="hover:text-brand-gold transition-colors italic">View All</a></li>
+          </ul>
+        </div>
+
+        {/* Contact & Social */}
+        <div className="md:col-span-1">
+          <h3 className="text-brand-gold text-xs font-sans tracking-widest uppercase mb-6">Connect</h3>
+          <ul className="space-y-4 text-brand-ivory/70 text-sm font-sans mb-8">
+            <li><a href="mailto:hello@saikrishnaphotography.com" className="hover:text-brand-gold transition-colors">hello@saikrishnaphotography.com</a></li>
+            <li><a href="tel:+919876543210" className="hover:text-brand-gold transition-colors">+91 98765 43210</a></li>
+          </ul>
+          
+          {/* Baby Shine Promo in Footer */}
+          <div className="mt-8 p-4 border border-brand-gold/20 bg-brand-charcoal/20">
+            <h4 className="text-brand-ivory text-xs font-serif mb-2">Looking for Newborn Photography?</h4>
+            <a 
+              href="https://babyshine.saikrishnaphotography.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-brand-gold text-xs font-sans uppercase tracking-widest hover:text-brand-ivory transition-colors"
+            >
+              Visit Baby Shine Studio →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 pt-10 border-t border-brand-charcoal/50 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p className="text-brand-ivory/40 text-xs font-sans tracking-widest uppercase">
+          © {currentYear} Sai Krishna Photography. All Rights Reserved.
+        </p>
+        <div className="flex gap-6 text-brand-ivory/40 text-xs font-sans tracking-widest uppercase">
+          <a href="#" className="hover:text-brand-gold transition-colors">Instagram</a>
+          <a href="#" className="hover:text-brand-gold transition-colors">Facebook</a>
+          <a href="#" className="hover:text-brand-gold transition-colors">YouTube</a>
+        </div>
+      </div>
+    </footer>
+  );
+}
