@@ -13,25 +13,12 @@ export default function Portfolio() {
       <PageHero 
         heading="Every Frame Tells a Story"
         subheading="Our finest work assembled."
-        minHeight="min-h-[50vh]"
-        image="/photos/event/3.jpg"
+        minHeight="min-h-[78vh]"
+        image="/photos/wedding/2.jpg"
       />
       
       <section className="max-w-7xl mx-auto px-6 pt-16">
-        <div className="flex justify-center gap-8 mb-16 overflow-x-auto pb-4">
-          <button className="text-brand-gold font-sans text-xs tracking-widest uppercase border-b border-brand-gold pb-1 whitespace-nowrap">All</button>
-          <button className="text-brand-ivory/50 hover:text-brand-ivory font-sans text-xs tracking-widest uppercase transition-colors whitespace-nowrap">Weddings</button>
-          <button className="text-brand-ivory/50 hover:text-brand-ivory font-sans text-xs tracking-widest uppercase transition-colors whitespace-nowrap">Maternity</button>
-          <button className="text-brand-ivory/50 hover:text-brand-ivory font-sans text-xs tracking-widest uppercase transition-colors whitespace-nowrap">Commercial</button>
-        </div>
-        
-        <PortfolioGrid items={15} />
-        
-        <div className="text-center mt-20">
-          <button className="border border-brand-gold/30 hover:border-brand-gold hover:bg-brand-gold/10 px-10 py-4 text-brand-gold tracking-widest text-sm uppercase transition-all duration-700 ease-custom">
-            Load More
-          </button>
-        </div>
+        <PortfolioGrid items={39} showFilters={true} />
       </section>
     </main>
   );

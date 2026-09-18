@@ -18,7 +18,7 @@ export default function ServicesMaster() {
       <PageHero 
         heading="One Studio. Every Moment."
         subheading="Many disciplines, one lens."
-        minHeight="min-h-[50vh]"
+        minHeight="min-h-[78vh]"
         image="/photos/studio/1.jpg"
       />
       

@@ -13,7 +13,7 @@ export default function Contact() {
       <PageHero 
         heading="Let's Create Something Timeless"
         subheading="Visit or Book Us"
-        minHeight="min-h-[50vh]"
+        minHeight="min-h-[78vh]"
         image="/photos/studio/3.jpg"
       />
       

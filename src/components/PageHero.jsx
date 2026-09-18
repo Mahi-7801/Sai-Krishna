@@ -1,7 +1,16 @@
 import { motion } from 'framer-motion';
 import { hideOnError } from '../data/photos';
 
-export default function PageHero({ heading, subheading, description, minHeight = "min-h-[70vh]", image }) {
+export default function PageHero({ 
+  heading, 
+  subheading, 
+  description, 
+  minHeight = "min-h-[78vh]", 
+  image, 
+  imagePosition = "object-[center_30%]",
+  imageClassName = "",
+  imageStyle = {}
+}) {
   return (
     <div className={`relative ${minHeight} bg-brand-dark flex flex-col items-center justify-center overflow-hidden pt-20`}>
       {image && (
@@ -10,7 +19,8 @@ export default function PageHero({ heading, subheading, description, minHeight =
           alt=""
           aria-hidden="true"
           onError={hideOnError}
-          className="absolute inset-0 z-0 w-full h-full object-cover opacity-30"
+          className={`absolute inset-x-0 -top-[280px] z-0 w-full h-[calc(100%+560px)] object-cover opacity-35 ${imagePosition} ${imageClassName}`}
+          style={imageStyle}
         />
       )}
       {/* Background Gradient/Overlay */}

@@ -5,6 +5,13 @@ import InstagramReels from '../components/InstagramReels';
 import HomeReviews from '../components/HomeReviews';
 import { motion } from 'framer-motion';
 
+const STATS = [
+  { number: '30+', label: 'Years of Legacy' },
+  { number: '5,000+', label: 'Sessions Captured' },
+  { number: '50+', label: 'Industry Awards' },
+  { number: '4.9★', label: 'Google Rating' },
+];
+
 export default function Home() {
   useSEO({ 
     title: 'Sai Krishna Photography', 
@@ -27,8 +34,33 @@ export default function Home() {
           <h2 className="text-3xl md:text-5xl font-serif text-brand-ivory font-light mb-6">Every Frame Tells a Story</h2>
           <div className="w-12 h-[1px] bg-brand-gold mx-auto mb-6"></div>
           <p className="text-brand-ivory/70 font-sans leading-relaxed text-sm md:text-base">
-            From the quiet anticipatory moments before the vows, to the grand celebrations.
+            From the quiet anticipatory moments before the vows, to the grand celebrations that echo through generations.
           </p>
+        </motion.section>
+
+        {/* Stats Bar */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.8 }}
+          className="border-y border-brand-charcoal"
+        >
+          <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 divide-x divide-brand-charcoal">
+            {STATS.map((stat, i) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="flex flex-col items-center justify-center py-6 px-4 text-center"
+              >
+                <span className="font-serif text-3xl md:text-4xl text-brand-gold font-light mb-2">{stat.number}</span>
+                <span className="font-sans text-[10px] tracking-[0.2em] uppercase text-brand-ivory/50">{stat.label}</span>
+              </motion.div>
+            ))}
+          </div>
         </motion.section>
 
         {/* Featured Portfolio */}
@@ -40,11 +72,12 @@ export default function Home() {
           className="px-6 max-w-7xl mx-auto"
         >
           <div className="text-center mb-16">
-            <h3 className="text-brand-gold font-sans text-xs tracking-widest uppercase mb-4">Latest Work</h3>
+            <span className="text-brand-gold font-sans text-xs tracking-widest uppercase">Latest Work</span>
+            <h2 className="text-3xl md:text-4xl font-serif text-brand-ivory font-light mt-3">From Our Lens</h2>
           </div>
-          <PortfolioGrid items={6} />
+          <PortfolioGrid items={9} />
           <div className="text-center mt-12">
-            <a href="/portfolio" className="inline-block border-b border-brand-gold/50 text-brand-gold font-sans uppercase tracking-widest text-xs pb-1 hover:border-brand-gold transition-colors">
+            <a href="/portfolio" className="inline-block border border-brand-gold/30 hover:border-brand-gold hover:bg-brand-gold/10 px-10 py-4 text-brand-gold tracking-widest text-sm uppercase transition-all duration-700 ease-custom">
               View Full Portfolio
             </a>
           </div>
