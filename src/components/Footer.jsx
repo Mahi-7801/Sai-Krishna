@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -22,10 +24,10 @@ export default function Footer() {
         <div className="md:col-span-1 md:ml-auto">
           <h3 className="text-brand-gold text-xs font-sans tracking-widest uppercase mb-6">Studio</h3>
           <ul className="space-y-4 text-brand-ivory/70 text-sm font-sans">
-            <li><a href="/about" className="hover:text-brand-gold transition-colors">About Us</a></li>
-            <li><a href="/portfolio" className="hover:text-brand-gold transition-colors">Portfolio</a></li>
-            <li><a href="/reviews" className="hover:text-brand-gold transition-colors">Testimonials</a></li>
-            <li><a href="/contact" className="hover:text-brand-gold transition-colors">Contact</a></li>
+            <li><Link to="/about" className="hover:text-brand-gold transition-colors">About Us</Link></li>
+            <li><Link to="/portfolio" className="hover:text-brand-gold transition-colors">Portfolio</Link></li>
+            <li><Link to="/reviews" className="hover:text-brand-gold transition-colors">Testimonials</Link></li>
+            <li><Link to="/contact" className="hover:text-brand-gold transition-colors">Contact</Link></li>
           </ul>
         </div>
 
@@ -33,11 +35,11 @@ export default function Footer() {
         <div className="md:col-span-1">
           <h3 className="text-brand-gold text-xs font-sans tracking-widest uppercase mb-6">Services</h3>
           <ul className="space-y-4 text-brand-ivory/70 text-sm font-sans">
-            <li><a href="/services/wedding" className="hover:text-brand-gold transition-colors">Weddings</a></li>
-            <li><a href="/services/pre-wedding" className="hover:text-brand-gold transition-colors">Pre-Wedding</a></li>
-            <li><a href="/services/maternity" className="hover:text-brand-gold transition-colors">Maternity</a></li>
-            <li><a href="/packages" className="hover:text-brand-gold transition-colors">Packages</a></li>
-            <li><a href="/services" className="hover:text-brand-gold transition-colors italic">View All</a></li>
+            <li><Link to="/services/wedding" className="hover:text-brand-gold transition-colors">Weddings</Link></li>
+            <li><Link to="/services/pre-wedding" className="hover:text-brand-gold transition-colors">Pre-Wedding</Link></li>
+            <li><Link to="/services/maternity" className="hover:text-brand-gold transition-colors">Maternity</Link></li>
+            <li><Link to="/packages" className="hover:text-brand-gold transition-colors">Packages</Link></li>
+            <li><Link to="/services" className="hover:text-brand-gold transition-colors italic">View All</Link></li>
           </ul>
         </div>
 
